@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizGameApp.MainPage">
+
+    <AbsoluteLayout>
+        <AbsoluteLayout.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#7AC358" Offset="0.0"/>
+                <GradientStop Color="#58C3B0" Offset="1.0"/>
+            </LinearGradientBrush>
+        </AbsoluteLayout.Background>
+
+
+        <Image Source="QuizGameIcon.png" HorizontalOptions="Center"/>
+
+
+            <!-- 
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Welcome to Xamarin.Forms!" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" FontSize="16" Padding="30,0,30,0"/> -->
+
+        <Image Source="ButtonStart.png"
+       AbsoluteLayout.LayoutBounds="0.5,0.5,250,250" AbsoluteLayout.LayoutFlags="PositionProportional"
+       Aspect="AspectFit">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImageTappedStart" />
+            </Image.GestureRecognizers>
+        </Image>
+        
+        
+        <Label x:Name="ScoreLabel"
+               Text="Loading answer..."
+               FontAttributes="Bold"
+               FontFamily="Aharoni"
+               FontSize="40"
+               TextColor="Black"            
+               AbsoluteLayout.LayoutBounds="0.55,1.35,250,250" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               />
+
+        <!-- Ваше изображение в левом нижнем углу -->
+        <Image Source="Score.png"
+       AbsoluteLayout.LayoutBounds="0,1,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"
+       TranslationX="15" TranslationY="-15"/>
+
+
+        <!-- Изображение в правом нижнем углу -->
+        <Image Source="OptionsOnMainMenu.png"
+               AbsoluteLayout.LayoutBounds="1,1,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"
+               TranslationX="-15" TranslationY="-15">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImageTappedOptions" />
+            </Image.GestureRecognizers>
+        </Image>
+    </AbsoluteLayout>
+    
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizGameApp.GamePage">
+    <AbsoluteLayout>
+        <AbsoluteLayout.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#7AC358" Offset="0.0"/>
+                <GradientStop Color="#58C3B0" Offset="1.0"/>
+            </LinearGradientBrush>
+        </AbsoluteLayout.Background>
+
+
+        <Image Source="SmalQuizgGame.png"        
+               AbsoluteLayout.LayoutBounds="0.5,0,250,120" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               Aspect="AspectFit" />
+
+
+
+        <Frame CornerRadius="60" TranslationY="130" Margin="37,0,37,0">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#0F732B" Offset="0" />
+                    <GradientStop Color="#40FFFFFF" Offset="1" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Label x:Name="QuestionLabel"
+           Text="Loading question..."
+           FontAttributes="Bold"
+           FontFamily="Terminal"
+           FontSize="24"
+           TextColor="Black"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+        </Frame>
+
+        <Grid AbsoluteLayout.LayoutBounds="0.5,0.55,330,100" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Grid Grid.Row="1">
+                <Button Text="True" Clicked="OnTrueClicked" BackgroundColor="#17B142" TextColor="White" CornerRadius="30" />
+                <Button Text="False" Clicked="OnFalseClicked" BackgroundColor="#CE2222" TextColor="White" Grid.Column="1" CornerRadius="30" />
+            </Grid>
+        </Grid>
+        
+        
+        <Image Source="Score.png"        
+               AbsoluteLayout.LayoutBounds="0.5,0.75,180,100" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               Aspect="AspectFit" />
+
+
+        <Label x:Name="AnswerLabel"
+               Text="Loading answer..."
+               AbsoluteLayout.LayoutBounds="0,1,150,150" AbsoluteLayout.LayoutFlags="PositionProportional"
+               TranslationX="15" TranslationY="-15"/>
+
+        <Label x:Name="ScoreLabel"
+               Text="Loading answer..."
+               FontAttributes="Bold"
+               FontFamily="Aharoni"
+               FontSize="60"
+               TextColor="Black"            
+               AbsoluteLayout.LayoutBounds="1.25,1.1,250,250" 
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               />
+
+
+    </AbsoluteLayout>
+</ContentPage>

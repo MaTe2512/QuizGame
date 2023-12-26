@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuizGameApp.Pages.OptionsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <AbsoluteLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#7AC358" Offset="0.0"/>
+                    <GradientStop Color="#58C3B0" Offset="1.0"/>
+                </LinearGradientBrush>
+            </AbsoluteLayout.Background>
+
+            <Image Source="SmalQuizgGame.png"        
+                   AbsoluteLayout.LayoutBounds="0.5,0,150,50" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Aspect="AspectFit" />
+            
+            <Image Source="Options.png"        
+                   AbsoluteLayout.LayoutBounds="0.5,0.07,250,120" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Aspect="AspectFit" />
+
+            <Image Source="Reset.png"        
+                   AbsoluteLayout.LayoutBounds="0.5,0.7,250,120" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ClickedOnReset" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="MeinMenuInOptions.png"        
+                   AbsoluteLayout.LayoutBounds="0.5,0.9,250,120" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ClickedOnMeinMenuInOptions" />
+                </Image.GestureRecognizers>
+            </Image>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
